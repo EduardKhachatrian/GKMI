@@ -1,2 +1,2 @@
 # GKMI
-Information selection algorythm
+Information selection algorithm
