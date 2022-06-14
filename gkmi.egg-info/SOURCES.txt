@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+gkmi.egg-info/PKG-INFO
+gkmi.egg-info/SOURCES.txt
+gkmi.egg-info/dependency_links.txt
+gkmi.egg-info/not-zip-safe
+gkmi.egg-info/requires.txt
+gkmi.egg-info/top_level.txt
+src/__init__.py
+src/gkmi.py
+src/performance_analysis.py
