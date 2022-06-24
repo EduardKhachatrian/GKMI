@@ -16,7 +16,6 @@ start = timeit.default_timer()
 
 # Creating the log file
 logging.basicConfig(filename = 'gkmilogfile.log')
-
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
