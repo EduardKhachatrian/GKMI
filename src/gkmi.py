@@ -4,6 +4,7 @@
 #            Andrea Marinoni       <andrea.marinoni@uit.no>
 
 import logging
+import warnings
 import itertools
 import numpy as np
 import numpy.matlib as matlib
@@ -144,8 +145,8 @@ def superpixels_generation(image, n_superpixels, segmentation_algorithm):
     # Grouping pixels indices that correspond to each superpixel
     superpixels_idx = []
     for i in np.unique(superpixels):
-         superpixels_idx.append(np.where(superpixels.flatten() == i)[0])
-    superpixels_idx = np.array(superpixels_idx)
+        superpixels_idx.append(np.where(superpixels.flatten() == i)[0])
+    superpixels_idx = np.array(superpixels_idx, dtype=object)
     return superpixels_idx, superpixels
 
 # (3) GRAPH BUILDING -------------------------------------------------------------------------------------- #
@@ -186,6 +187,7 @@ def mutual_information(array):
         array = array[::100,:]
 
     # Building the graph
+    warnings.filterwarnings("ignore")
     mi_matrix = np.reshape([normalized_mutual_info_score(array[:,ii].ravel(),array[:,jj].ravel()) 
                 for ii,jj in itertools.product(range(array.shape[1]), range(array.shape[1]))], 
                 (array.shape[1], array.shape[1]))         
