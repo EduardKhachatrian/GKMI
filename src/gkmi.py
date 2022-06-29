@@ -144,8 +144,8 @@ def superpixels_generation(image, n_superpixels, segmentation_algorithm):
     # Grouping pixels indices that correspond to each superpixel
     superpixels_idx = []
     for i in np.unique(superpixels):
-         superpixels_idx.append(np.where(superpixels.flatten() == i)[0])
-    superpixels_idx = np.array(superpixels_idx)
+        superpixels_idx.append(np.where(superpixels.flatten() == i)[0])
+    superpixels_idx = np.array(superpixels_idx, dtype=object)
     return superpixels_idx, superpixels
 
 # (3) GRAPH BUILDING -------------------------------------------------------------------------------------- #

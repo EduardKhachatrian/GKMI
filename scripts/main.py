@@ -14,7 +14,10 @@ import matplotlib.patches as mpatches
 import os
 start = timeit.default_timer()
 
-
+# Creating the log file
+logging.basicConfig(filename = 'gkmilogfile.log')
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
 
 parser   = argparse.ArgumentParser()
 parser.add_argument(
@@ -54,10 +57,6 @@ if dataset=='Salinas':
 			   'Grapes_untrained', 'Soil_vinyard_develop', 'Corn_senesced_green_weeds',
 			   'Lettuce_romaine_4wk', 'Lettuce_romaine_5wk', 'Lettuce_romaine_6wk',
 			   'Lettuce_romaine_7wk', 'Vinyard_untrained', 'Vinyard_vertical_trellis']
-
-# Creating the log file
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
 
 rows, cols = ground_truth.shape
 
