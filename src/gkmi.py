@@ -74,7 +74,7 @@ def GKMI(dataset, n_clusters, attribute_n=0, n_superpixels=100, segmentation_alg
 
     print ('Start Processing : Gaussian Kernel')
     logger.info('Start Processing : Gaussian Kernel')
-    for i in xrange(pixels_idx.shape[0]):
+    for i in range(pixels_idx.shape[0]):
         print ('%s : %s' % ('Size of superpixel', pixels_idx[i].shape))
         logger.info('%s : %s' % ('Size of superpixel', pixels_idx[i].shape))
         
@@ -89,9 +89,11 @@ def GKMI(dataset, n_clusters, attribute_n=0, n_superpixels=100, segmentation_alg
             clusters = optimal_cluster_number(joint_eigenvalues)
             print ('%s : %s' % ('Optimal number of clusters', clusters))
             logger.info('%s : %s' % ('Optimal number of clusters', clusters))
-
         else:
             clusters = n_clusters
+
+        if joint_eigenvectors.flags['C_CONTIGUOUS']==False:
+            joint_eigenvectors = np.ascontiguousarray(joint_eigenvectors)
 
         # Applying k-means clustering
         try:
@@ -185,7 +187,7 @@ def mutual_information(array):
 
     # Building the graph
     mi_matrix = np.reshape([normalized_mutual_info_score(array[:,ii].ravel(),array[:,jj].ravel()) 
-                for ii,jj in itertools.product(xrange(array.shape[1]), xrange(array.shape[1]))], 
+                for ii,jj in itertools.product(range(array.shape[1]), range(array.shape[1]))], 
                 (array.shape[1], array.shape[1]))         
     mi_laplacian = csgraph.laplacian(mi_matrix, normed=True)    
     return mi_laplacian

@@ -11,12 +11,11 @@ import scipy.io as io
 from skimage import exposure
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
-
+import os
 start = timeit.default_timer()
 
 # Creating the log file
 logging.basicConfig(filename = 'gkmilogfile.log')
-
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
@@ -30,10 +29,18 @@ dataset  = args.dataset
 
 
 if dataset=='Pavia':
-	data         = normalize(io.loadmat('test_datasets/PaviaU.mat')['paviaU'])
-	ground_truth = io.loadmat('test_datasets/PaviaU_gt.mat')['paviaU_gt']
-	classes = ['Asphalt', 'Meadows', 'Gravel', 'Trees', 'Painted metal sheets', 
-			   'Bare Soil', 'Bitumen', 'Self-Blocking Bricks', 'Shadows']
+	from pavia_config import (
+		data_dir,
+		classes,
+		output_dir,
+		n_clusters,
+		n_superpixels,
+		attribute_n,
+		segmentation_algorithm
+	)
+	data         = normalize(io.loadmat(os.path.join(data_dir,'PaviaU.mat'))['paviaU'])
+	ground_truth = io.loadmat(os.path.join(data_dir,'PaviaU_gt.mat'))['paviaU_gt']
+	
 
 if dataset=='KSC':
 	data         = normalize(io.loadmat('test_datasets/KSC.mat')['KSC'])
@@ -54,12 +61,23 @@ if dataset=='Salinas':
 rows, cols = ground_truth.shape
 
 # Running GKMI attribute selection
-pixel_idx, idx_GKMI = GKMI(data, n_clusters='auto', attribute_n=0, 
-						   n_superpixels=20, segmentation_algorithm='slic')
+pixel_idx, idx_GKMI = GKMI( 
+	data,
+	n_clusters=n_clusters, 
+	attribute_n=attribute_n, 
+	n_superpixels=n_superpixels, 
+	segmentation_algorithm=segmentation_algorithm
+	)
 
 # Running parallel classification
-OA, Kappa, AA, cm, classified_map = perform_classification(data, ground_truth, pixel_idx, idx_GKMI, 
-                                                           test_size=0.8, classifier='RF')
+OA, Kappa, AA, cm, classified_map = perform_classification(
+	data, 
+	ground_truth, 
+	pixel_idx, 
+	idx_GKMI, 
+	test_size=0.8, 
+	classifier='RF'
+)
 
 print  ('Performance Evaluation')
 print  ('%s : %s' % ('Overall Accuracy', np.round(OA,1)))
@@ -89,7 +107,7 @@ for n_bin in n_bins:
     plt.imshow(np.reshape(classified_map, (rows, cols)), cmap=cmap)
 plt.axis('off')
 plt.legend(handles=patches, bbox_to_anchor=(1.01,1), loc=2, borderaxespad=0., fontsize=20)
-plt.savefig('/Users/ekh011/Desktop/script/classified_maps/' + str(dataset) + '_classified.eps', dpi=200, 
+plt.savefig(os.path.join(output_dir, str(dataset) + '_classified.eps'), dpi=200, 
 	transparent=True, bbox_inches='tight')
 
 stop = timeit.default_timer()
