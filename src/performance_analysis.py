@@ -70,6 +70,7 @@ def perform_classification(dataset, ground_truth, pixel_idx, idx_GKMI,
 
     # Create training samples
     Xtrain, ytrain, _, _ = preparation_for_classification(array_reshaped, ground_truth, test_size)
+
     counter = 1
     # Classify the pixels in each superpixels.
     print ('Start Classification : ')

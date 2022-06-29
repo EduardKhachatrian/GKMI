@@ -40,7 +40,6 @@ if dataset=='Pavia':
 	)
 	data         = normalize(io.loadmat(os.path.join(data_dir,'PaviaU.mat'))['paviaU'])
 	ground_truth = io.loadmat(os.path.join(data_dir,'PaviaU_gt.mat'))['paviaU_gt']
-	
 
 if dataset=='KSC':
 	data         = normalize(io.loadmat('test_datasets/KSC.mat')['KSC'])
@@ -59,6 +58,7 @@ if dataset=='Salinas':
 			   'Lettuce_romaine_7wk', 'Vinyard_untrained', 'Vinyard_vertical_trellis']
 
 rows, cols = ground_truth.shape
+
 
 # Running GKMI attribute selection
 pixel_idx, idx_GKMI = GKMI( 
