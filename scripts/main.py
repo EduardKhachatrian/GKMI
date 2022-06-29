@@ -29,10 +29,12 @@ dataset  = args.dataset
 
 
 if dataset=='Pavia':
+	from pavia_config import (
+		
+	)
 	data         = normalize(io.loadmat('test_datasets/PaviaU.mat')['paviaU'])
 	ground_truth = io.loadmat('test_datasets/PaviaU_gt.mat')['paviaU_gt']
-	classes = ['Asphalt', 'Meadows', 'Gravel', 'Trees', 'Painted metal sheets', 
-			   'Bare Soil', 'Bitumen', 'Self-Blocking Bricks', 'Shadows']
+	
 
 if dataset=='KSC':
 	data         = normalize(io.loadmat('test_datasets/KSC.mat')['KSC'])
