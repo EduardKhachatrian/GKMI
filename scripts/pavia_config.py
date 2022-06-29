@@ -14,9 +14,7 @@ attribute_n   = 50
 n_clusters    = 'auto'
 segmentation_algorithm = 'slic'
 
-logging.basicConfig(filename = os.path.join(output_dir,'gkmilogfile.log'))
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
+
 
 if not os.path.exists(data_dir):
 	print(f"Directory {data_dir} doesn't exist!")
@@ -25,5 +23,8 @@ if not os.path.exists(data_dir):
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 
+logging.basicConfig(filename = os.path.join(output_dir,'gkmilogfile.log'))
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
 
 # TODO: add to the logger the configuration details
