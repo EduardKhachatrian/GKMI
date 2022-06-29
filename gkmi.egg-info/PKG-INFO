@@ -1,4 +1,4 @@
-Metadata-Version: 2.1
+Metadata-Version: 1.0
 Name: gkmi
 Version: 0.1
 Summary: GKMI - Unsupervised Information Selection Method
@@ -6,9 +6,6 @@ Home-page: https://github.com/EduardKhachatrian/GKMI
 Author: EdKh
 Author-email: khachatrianeduard@gmail.com
 License: MIT
+Description: UNKNOWN
 Keywords: gkmi
 Platform: UNKNOWN
-License-File: LICENSE
-
-UNKNOWN
-

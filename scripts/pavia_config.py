@@ -5,10 +5,10 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
 dataset = "Pavia"
-data_dir = "/test_datasets/pavia"
+data_dir = "/Users/ekh011/Desktop/script/test_datasets/"
 classes = ['Asphalt', 'Meadows', 'Gravel', 'Trees', 'Painted metal sheets', 
 			   'Bare Soil', 'Bitumen', 'Self-Blocking Bricks', 'Shadows']
-output_dir = "/classification_outputs/Pavia"
+output_dir = "classification_outputs/Pavia"
 
 n_superpixels = 50
 attribute_n   = 50
