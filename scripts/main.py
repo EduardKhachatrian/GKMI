@@ -116,6 +116,15 @@ plt.legend(handles=patches, bbox_to_anchor=(1.01,1), loc=2, borderaxespad=0., fo
 plt.savefig(os.path.join(output_dir, str(dataset) + '_classified.eps'), dpi=200, 
 	transparent=True, bbox_inches='tight')
 
+io.savemat(os.path.join(output_dir, str(dataset) + '_results.mat'), {
+										'pixel indexes' : pixel_idx, 
+										'selected indexes' : idx_GKMI, 
+										'OA' : OA, 
+										'AA' : AA, 
+										'Kappa' : Kappa, 
+										'map' : classified_map
+})
+
 stop = timeit.default_timer()
 
 print  ('%s : %s' % ('Execution Time [sec]', stop - start))
