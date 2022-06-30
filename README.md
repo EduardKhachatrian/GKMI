@@ -1,8 +1,6 @@
-# GKMI / Unsupervised Information Selection Method
+# GKMI / Automatic and Unsupervised Information Selection Method
 
-GKMI is a flexible, accurate, efficient, and interpretable attribute selection method 
-that is based on information theory metrics and Graph Laplacians and allows determining 
-the most informative and relevant attributes in heterogeneous datasets. 
+GKMI is a flexible, accurate, efficient, and interpretable attribute selection method that is based on information theory metrics and Graph Laplacians and allows determining the most informative and relevant attributes in heterogeneous datasets. The proposed approach assesses relevant information on a global and local level using two metrics that combine data structure and information content.  It selects relevant attributes for different regions of an image according to their physical characteristics and observation conditions. 
 
 # Installation :
 
@@ -24,7 +22,7 @@ $\color{green}{\textbf{Build Install the GKMI Package}}$
 python3 setup.py build install
 ```
 
-$\color{green}{\textbf{Run Information Selection and Classification}}$, $\textbf<{dataset}>$ corresponds to the dataset the user wants to run the experiment. 
+$\color{green}{\textbf{Run Information Selection and Classification}}$, <$\text{dataset}$> corresponds to the dataset the user wants to run the experiment. 
 
 In ```sripts/*_config.py``` relpace ``` data_dir = 'test_datasets/ ``` with your local data path. Additionally, the user can tune the experiment's parameters for information selection and classification in config files.
     
