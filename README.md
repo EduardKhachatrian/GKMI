@@ -84,3 +84,6 @@ $\color{teal}{\textbf{Folder Structure of Output Data:}}$
 
 * E. Khachatrian, S. Chlaily, T. Eltoft, W. Dierking, F. Dinessen and A. Marinoni, "Automatic Selection of Relevant Attributes for Multi-Sensor Remote Sensing Analysis: A Case Study on Sea Ice Classification," in IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, vol. 14, pp. 9025-9037, 2021, doi: 10.1109/JSTARS.2021.3099398.
 
+* E. Khachatrian, S. Chlaily, T. Eltoft, P. Gamba and A. Marinoni, "Unsupervised Band Selection for Hyperspectral Datasets by Double Graph Laplacian Diagonalization," 2021 IEEE International Geoscience and Remote Sensing Symposium IGARSS, 2021, pp. 4007-4010, doi: 10.1109/IGARSS47720.2021.9553127.
+
+
