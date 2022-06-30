@@ -1,5 +1,5 @@
-from src.gkmi import GKMI, normalize
-from src.performance_analysis import perform_classification
+from gkmi.gkmi import GKMI, normalize
+from gkmi.performance_analysis import perform_classification
 
 import os
 import random

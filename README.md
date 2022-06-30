@@ -74,9 +74,9 @@ $\color{teal}{\textbf{Folder Structure of Output Data:}}$
 
 # Files :
 
-```src/gkmi.py``` contains the information selection method.
+```gkmi/gkmi.py``` contains the information selection method.
 
-```src/performance_analysis.py``` contains the classification and performance evaluation part.
+```gkmi/performance_analysis.py``` contains the classification and performance evaluation part.
 
 # References :
 

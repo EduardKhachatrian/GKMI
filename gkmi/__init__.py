@@ -1,2 +1,2 @@
 #"""Top-level package."""
-from src import *
+from gkmi import *

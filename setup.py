@@ -18,7 +18,7 @@ include_package_data=True,
 keywords="gkmi",
 name="gkmi",
 packages=[
-'src',
+'gkmi',
 ],
 test_suite="tests",
 zip_safe=False,
