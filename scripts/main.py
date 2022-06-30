@@ -1,6 +1,7 @@
 from src.gkmi import GKMI, normalize
 from src.performance_analysis import perform_classification
 
+import os
 import random
 import timeit
 import logging
@@ -11,7 +12,7 @@ import scipy.io as io
 from skimage import exposure
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
-import os
+
 start = timeit.default_timer()
 
 logger = logging.getLogger(__name__)
