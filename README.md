@@ -2,7 +2,7 @@
 
 GKMI is a flexible, accurate, efficient, and interpretable attribute selection method that is based on information theory metrics and Graph Laplacians and allows determining the most informative and relevant attributes in heterogeneous datasets. The proposed approach assesses relevant information on a global and local level using two metrics that combine data structure and information content.  It selects relevant attributes for different regions of an image according to their physical characteristics and observation conditions. 
 
-![flowchart.jpg](attachment:flowchart.jpg)
+![Alt text](flowchart.jpg)
 
 # Installation :
 
