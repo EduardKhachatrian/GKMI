@@ -14,8 +14,6 @@ import matplotlib.patches as mpatches
 import os
 start = timeit.default_timer()
 
-# Creating the log file
-logging.basicConfig(filename = 'gkmilogfile.log')
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
@@ -29,7 +27,7 @@ dataset  = args.dataset
 
 
 if dataset=='Pavia':
-	from pavia_config import (
+	from config_pavia import (
 		data_dir,
 		classes,
 		output_dir,
@@ -40,25 +38,35 @@ if dataset=='Pavia':
 	)
 	data         = normalize(io.loadmat(os.path.join(data_dir,'PaviaU.mat'))['paviaU'])
 	ground_truth = io.loadmat(os.path.join(data_dir,'PaviaU_gt.mat'))['paviaU_gt']
+	
 
 if dataset=='KSC':
-	data         = normalize(io.loadmat('test_datasets/KSC.mat')['KSC'])
-	ground_truth = io.loadmat('test_datasets/KSC_gt.mat')['KSC_gt']
-	classes = ['Shrub', 'Willow swamp', 'CP hammrock', 'CP/Oak', 'Slash pine', 
-			   'Oak/Broadleaf', 'Hardwood swamp', 'Graminoid marsh', 'Spartina marsh', 
-			   'Cattail marsh', 'Salt marsh', 'Mud flats', 'Water']
+	from config_ksc import (
+		data_dir,
+		classes,
+		output_dir,
+		n_clusters,
+		n_superpixels,
+		attribute_n,
+		segmentation_algorithm
+	)
+	data         = normalize(io.loadmat(os.path.join(data_dir,'KSC.mat'))['KSC'])
+	ground_truth = io.loadmat(os.path.join(data_dir,'KSC_gt.mat'))['KSC_gt']
 
 if dataset=='Salinas':
-	data         = normalize(io.loadmat('test_datasets/Salinas.mat')['salinas'])
-	ground_truth = io.loadmat('test_datasets/Salinas_gt.mat')['salinas_gt']
-	classes = ['Brocoli_green_weeds_1', 'Brocoli_green_weeds_2', 'Fallow', 
-			   'Fallow_rough_plow', 'Fallow_smooth', 'Stubble', 'Celery',
-			   'Grapes_untrained', 'Soil_vinyard_develop', 'Corn_senesced_green_weeds',
-			   'Lettuce_romaine_4wk', 'Lettuce_romaine_5wk', 'Lettuce_romaine_6wk',
-			   'Lettuce_romaine_7wk', 'Vinyard_untrained', 'Vinyard_vertical_trellis']
+	from config_salinas import (
+		data_dir,
+		classes,
+		output_dir,
+		n_clusters,
+		n_superpixels,
+		attribute_n,
+		segmentation_algorithm
+	)
+	data         = normalize(io.loadmat(os.path.join(data_dir,'Salinas.mat'))['salinas'])
+	ground_truth = io.loadmat(os.path.join(data_dir,'Salinas_gt.mat'))['salinas_gt']
 
 rows, cols = ground_truth.shape
-
 
 # Running GKMI attribute selection
 pixel_idx, idx_GKMI = GKMI( 
@@ -96,8 +104,6 @@ n_bins = np.arange(1,number_of_colors+1)
 colors = ["#"+''.join([random.choice('0123456789ABCDEF') for j in range(6)])
              for i in range(number_of_colors)]
     
-#classes = ['Class ' + str(i+1) for i in range(number_of_colors)]
-
 values = np.unique(classified_map.ravel())
 patches = [ mpatches.Patch(color=colors[i], label=classes[i].format(l=values[i]) ) for i in range(len(values)) ]
 

@@ -1,16 +1,15 @@
 import os
 import logging
 
-
-
-dataset = "Pavia"
+dataset = "KSC"
 data_dir = "/Users/ekh011/Desktop/script/test_datasets/"
-classes = ['Asphalt', 'Meadows', 'Gravel', 'Trees', 'Painted metal sheets', 
-			   'Bare Soil', 'Bitumen', 'Self-Blocking Bricks', 'Shadows']
-output_dir = "classification_outputs/Pavia"
+classes = ['Shrub', 'Willow swamp', 'CP hammrock', 'CP/Oak', 'Slash pine', 
+			   'Oak/Broadleaf', 'Hardwood swamp', 'Graminoid marsh', 'Spartina marsh', 
+			   'Cattail marsh', 'Salt marsh', 'Mud flats', 'Water']
+output_dir = "classification_outputs/KSC"
 
-n_superpixels = 50
-attribute_n   = 50
+n_superpixels = 150
+attribute_n   = 70
 n_clusters    = 'auto'
 segmentation_algorithm = 'slic'
 
@@ -23,6 +22,4 @@ logger.setLevel(logging.DEBUG)
 
 if not os.path.exists(data_dir):
 	print(f"Directory {data_dir} doesn't exist!")
-	logger.info(f"Directory {data_dir} doesn't exist!") 
-
-# TODO: add to the logger the configuration details
+	logger.info(f"Directory {data_dir} doesn't exist!")
