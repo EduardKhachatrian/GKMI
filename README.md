@@ -36,7 +36,7 @@ python3 main.py -d <dataset>
 
 As an example we are using a few publicly available hyperspectral scenes. 
 
-They can be found here - [Hyperspectral Remote Sensing Scenes](https://www.ehu.eus/ccwintco/index.php/Hyperspectral_Remote_Sensing_Scenes)
+Scenes can be found here - [Hyperspectral Remote Sensing Scenes](https://www.ehu.eus/ccwintco/index.php/Hyperspectral_Remote_Sensing_Scenes)
 
 
 $\color{teal}{\textbf{Folder Structure of Input Data:}}$
