@@ -6,25 +6,25 @@ GKMI is a flexible, accurate, efficient, and interpretable attribute selection m
 
 # Installation :
 
-$\color{green}{\textbf{Clone the Repository}}$
+$\color{magenta}{\textbf{Clone the Repository}}$
  
 ```
 git clone git@github.com:EduardKhachatrian/GKMI.git
 cd GKMI
 ```
 
-$\color{green}{\textbf{Create Environment Using .yml File}}$
+$\color{magenta}{\textbf{Create Environment Using .yml File}}$
  
 ```
 conda env create -f environment.yml
 conda activate gkmi
 ```
-$\color{green}{\textbf{Build Install the GKMI Package}}$
+$\color{magenta}{\textbf{Build Install the GKMI Package}}$
 ```
 python3 setup.py build install
 ```
 
-$\color{green}{\textbf{Run Information Selection and Classification}}$, <$\text{dataset}$> corresponds to the dataset the user wants to run the experiment. 
+$\color{magenta}{\textbf{Run Information Selection and Classification}}$, <$\text{dataset}$> corresponds to the dataset the user wants to run the experiment. 
 
 In ```sripts/*_config.py``` relpace ``` data_dir = 'test_datasets/ ``` with your local data path. Additionally, the user can tune the experiment's parameters for information selection and classification in config files.
     
@@ -39,7 +39,7 @@ As an example we are using a few publicly available hyperspectral scenes.
 They can be found here - [Hyperspectral Remote Sensing Scenes](https://www.ehu.eus/ccwintco/index.php/Hyperspectral_Remote_Sensing_Scenes)
 
 
-$\color{blue}{\textbf{Folder Structure of Input Data:}}$
+$\color{teal}{\textbf{Folder Structure of Input Data:}}$
     
         test_data
         │     
@@ -50,7 +50,7 @@ $\color{blue}{\textbf{Folder Structure of Input Data:}}$
             Salinas.mat
             Salinas_gt.mat
 
-$\color{blue}{\textbf{Folder Structure of Output Data:}}$
+$\color{teal}{\textbf{Folder Structure of Output Data:}}$
 
         classification_outputs
         │     
