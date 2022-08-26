@@ -13,8 +13,7 @@ git clone git@github.com:EduardKhachatrian/GKMI.git
 cd GKMI
 ```
 
-$\color{olive}{\textbf{Create Environment Using .yml}}$
- <font color='olive'>Create Environment Using .yml</font>
+$\color{olive}{\textbf{Clone the Repository}}$
 
 ```
 conda env create -f environment.yml
