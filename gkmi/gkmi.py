@@ -28,8 +28,8 @@ def GKMI(
     n_superpixels=100,
     segmentation_algorithm="watershed",
 ):
-    """GKMI is a flexible, accurate, efficient, and interpretable attribute selection method
-    that allows determining the most informative and relevant attributes in heterogeneous datasets.
+    """GKMI is a flexible, accurate, efficient, and interpretable attribute selection method that 
+    allows determining the most informative and relevant attributes in highly heterogeneous datasets.
 
     Parameters
     ----------
