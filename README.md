@@ -14,6 +14,8 @@ cd GKMI
 ```
 
 $\color{olive}{\textbf{Create Environment Using .yml}}$
+<p style='color:olive'>Create Environment Using .yml</p>
+
 
 ```
 conda env create -f environment.yml
