@@ -14,7 +14,7 @@ cd GKMI
 ```
 
 $\color{olive}{\textbf{Create Environment Using .yml}}$
-<p style='color:olive'>Create Environment Using .yml</p>
+<p style='color:red'>Create Environment Using .yml</p>
 
 
 ```
