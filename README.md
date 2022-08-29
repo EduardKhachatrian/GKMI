@@ -8,7 +8,7 @@ GKMI is a flexible, accurate, efficient, and interpretable attribute selection m
 
 $\color{olive}{\textbf{Clone the Repository}}$
  
- 
+
 ```
 git clone git@github.com:EduardKhachatrian/GKMI.git
 cd GKMI
