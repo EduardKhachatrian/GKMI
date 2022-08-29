@@ -8,6 +8,10 @@ GKMI is a flexible, accurate, efficient, and interpretable attribute selection m
 
 $\color{olive}{\textbf{Clone the Repository}}$
  
+ ```diff
+- Clone the Repository
+```
+
 ```
 git clone git@github.com:EduardKhachatrian/GKMI.git
 cd GKMI
@@ -15,11 +19,20 @@ cd GKMI
 
 $\color{olive}{\textbf{Create Environment Using .yml}}$
 
+```diff
+- Create Environment Using .yml
+```
+
 ```
 conda env create -f environment.yml
 conda activate gkmi
 ```
 $\color{olive}{\textbf{Build Install the GKMI Package}}$
+
+```diff
+- Build Install the GKMI Package
+```
+
 ```
 python3 setup.py build install
 ```
