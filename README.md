@@ -22,7 +22,7 @@ conda env create -f environment.yml
 conda activate gkmi
 ```
 $\color{olive}{\textbf{Build Install the GKMI Package}}$
-
+<font color='olive'>Build Install the GKMI Package</font>
 
 ```
 python3 setup.py build install
