@@ -28,6 +28,7 @@ $\color{olive}{\textbf{Build Install the GKMI Package}}$
 python3 setup.py build install
 ```
 
+$\color{olive}{\textbf{Run Information Selection and Classification}}$
 
 * $<\text{dataset}>$ corresponds to the dataset the user wants to run the experiment. 
 
