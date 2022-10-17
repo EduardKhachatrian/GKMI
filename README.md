@@ -28,7 +28,7 @@ conda activate gkmi
 python3 setup.py build install
 ```
 
-### $\color{olive}{\textbf{Run Information Selection}}$
+### $\color{olive}{\textbf{Run Information Selection and Classification}}$
 * $<\text{dataset}>$ corresponds to the dataset the user wants to run the experiment. 
 
 In ```sripts/*_config.py``` relpace ``` data_dir = 'test_datasets/ ``` with your local data path. Additionally, the user can tune the experiment's parameters for information selection and classification in config files.
