@@ -4,7 +4,7 @@ GKMI is a flexible, accurate, efficient, and interpretable attribute selection m
 
 ![Alt text](flowchart.jpg)
 
-# Installation :
+# $\color{lightblue}{\textbf{Installation :}}$
 
 ### $\color{olive}{\textbf{Clone the Repository}}$
  
@@ -37,7 +37,7 @@ In ```sripts/*_config.py``` relpace ``` data_dir = 'test_datasets/ ``` with your
 python3 main.py -d <dataset>
 ```
 
-# Datasets :
+# $\color{mediumpurple}{\textbf{Datasets :}}$
 
 As an example we are using a few publicly available hyperspectral scenes. 
 
@@ -55,7 +55,7 @@ Scenes can be found here - [Hyperspectral Remote Sensing Scenes](https://www.ehu
             Salinas.mat
             Salinas_gt.mat
 
-### $\color{cornflowerblue}{\textbf{Folder Structure of Output Data:}}$
+### $\color{teal}{\textbf{Folder Structure of Output Data:}}$
 
         classification_outputs
         │     
@@ -77,13 +77,13 @@ Scenes can be found here - [Hyperspectral Remote Sensing Scenes](https://www.ehu
                 Salinas_results.eps
                 gkmilogfile.log 
 
-# Files :
+# $\color{coral}{\textbf{Files :}}$
 
 ```gkmi/gkmi.py``` contains the information selection method.
 
 ```gkmi/performance_analysis.py``` contains the classification and performance evaluation part.
 
-# $\color{olive}{\textbf{References :}}$
+# $\color{cornflowerblue}{\textbf{References :}}$
 
 * E. Khachatrian, S. Chlaily, T. Eltoft and A. Marinoni, "A Multimodal Feature Selection Method for Remote Sensing Data Analysis Based on Double Graph Laplacian Diagonalization," in IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, vol. 14, pp. 11546-11566, 2021, doi: 10.1109/JSTARS.2021.3124308.
 
