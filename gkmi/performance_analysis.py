@@ -5,8 +5,9 @@ from sklearn.metrics import (
     classification_report,
     cohen_kappa_score,
     confusion_matrix,
+    precision_recall_fscore_support,
 )
-from sklearn.metrics import precision_recall_fscore_support as score
+
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVC
@@ -139,7 +140,7 @@ def accuracy_evaluation(y_test, y_pred):
     OA = np.round(accuracy_score(y_test, y_pred) * 100, 1)
     Kappa = np.round(cohen_kappa_score(y_test, y_pred) * 100, 1)
     # Average accuracy
-    precision, recall, fscore, support = score(y_test, y_pred)
+    precision, recall, fscore, support = precision_recall_fscore_support(y_test, y_pred)
     AA = np.round(np.sum(precision) / len(precision) * 100, 1)
     # Confusion matrix
     c = confusion_matrix(y_test, y_pred)
