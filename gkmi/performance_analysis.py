@@ -143,7 +143,7 @@ def accuracy_evaluation(y_test, y_pred):
     AA = np.round(np.sum(precision) / len(precision) * 100, 1)
     # Confusion matrix
     c = confusion_matrix(y_test, y_pred)
-    cm = np.round(c / c.astype(np.float).sum(axis=0), 3)
+    cm = np.round(c / c.sum(axis=0), 3)
     return OA, Kappa, AA, cm
 
 

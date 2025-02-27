@@ -125,7 +125,7 @@ def GKMI(
     print("Finished Processing : Gaussian Kernel")
     logger.info("Finished Processing : Gaussian Kernel")
 
-    attributes_selected = np.array(attributes_selected)
+    attributes_selected = np.array(attributes_selected, dtype=object)
     return pixels_idx, attributes_selected
 
 
